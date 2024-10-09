@@ -11,13 +11,13 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        make install
+        make -C scaffold install
     - name: Lint with Pylint
       run: |
-        make lint
+        make -C scaffold lint
     - name: Test with Pytest
       run: |
-        make test
+        make -C scaffold test
     - name: Format code with Python black
       run: |
-        make format
+        make -C scaffold format
